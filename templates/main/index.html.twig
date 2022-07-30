@@ -4,13 +4,16 @@
 
 {% block body %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ page_title }}! ✅</h1>
+{# PRESENTATION #}
+{% include "main/presentation.html.twig" %}
+  
+{# COMPETENCES #}
+{% include "main/competences.html.twig" %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/nathuz/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/nathuz/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
-    </ul>
-</div>
+{# SERVICES #}
+{% include "main/services.html.twig" %}
+
+{# DERNIERES REALISATIONS #}
+{% include "main/lastreal.html.twig" %}
+
 {% endblock %}
