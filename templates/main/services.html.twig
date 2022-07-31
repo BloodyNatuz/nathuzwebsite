@@ -6,7 +6,7 @@
           <div class="row services">
             {% for services in services %}
             <div class="card" style="width: 18rem;">
-              <img src="/img/photo.jpg" class="card-img-top" alt="personne travaillant sur un ordinateur">
+              <img src="{{ services.serviceImg }}" class="card-img-top" alt="personne travaillant sur un ordinateur">
               <div class="card-body">
                 <h5 class="card-title">{{ services.name }}</h5>
                 <h5 class="card-text">{{ services.description }}</h5>
