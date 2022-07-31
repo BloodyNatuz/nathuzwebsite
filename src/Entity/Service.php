@@ -32,6 +32,11 @@ class Service
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $serviceImg;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Service
     public function setPrice(string $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getServiceImg(): ?string
+    {
+        return $this->serviceImg;
+    }
+
+    public function setServiceImg(string $serviceImg): self
+    {
+        $this->serviceImg = $serviceImg;
 
         return $this;
     }
