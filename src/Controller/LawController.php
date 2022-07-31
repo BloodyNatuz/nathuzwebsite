@@ -14,7 +14,7 @@ class LawController extends AbstractController
     public function index(): Response
     {
         return $this->render('law/index.html.twig', [
-            'controller_name' => 'LawController',
+            'page_title' => 'Nathuz - Mentions Légales',
         ]);
     }
 }
