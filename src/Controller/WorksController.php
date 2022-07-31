@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Real;
 use App\Repository\RealRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,6 +21,17 @@ class WorksController extends AbstractController
         return $this->render('works/index.html.twig', [
             'page_title' => 'Nathuz - Réalisations',
             'reals' => $realRepo->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/work/{id}/show", name="app_work_show")
+     */
+    public function real_show(Real $real): Response
+    {
+        return $this->render('works/work.html.twig', [
+            'page_title' => 'Nathuz - Réalisation',
+            'real' => $real,
         ]);
     }
 }

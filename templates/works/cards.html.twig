@@ -9,7 +9,7 @@
         <section class="cards-wrapper">
             {% for reals in reals %}
             <div class="card-grid-space">
-              <a class="card" href="#" style="--bg-img: url({{ reals.realImg }})">
+              <a class="card" href="{{ path('app_work_show', {'id': reals.id}) }}" style="--bg-img: url({{ reals.realImg }})">
                 <div>
                   <h2>{{ reals.name }}</h2>
                   <p>{{ reals.description[:100] ~ '...' }}</p>

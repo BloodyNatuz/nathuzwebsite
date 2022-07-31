@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ page_title }} - {{ real.name }}
+{% endblock %}
+
+{% block body %}
+
+<!-- WORK -->
+<div class="work">
+    <div class="container">
+        <h2>{{ real.name }}</h2>
+        <!-- imagework -->
+        <div class="imgwork">
+            <img src="{{ real.realImg }}" alt="donut au chocalat sur un fond rose">
+        </div>
+
+        <!-- infowork -->
+        <div class="infowork">
+            <div class="tags">
+                {% if real.tag == '3D' %}
+                <div class="tag activetag">3D</div>
+                {% else %}
+                <div class="tag">3D</div>
+                {% endif %}
+                {% if real.tag == 'Affiche' %}
+                <div class="tag activetag">Affiche</div>
+                {% else %}
+                <div class="tag">Affiche</div>
+                {% endif %}
+                {% if real.tag == 'Charte graphique' %}
+                <div class="tag activetag">Charte graphique</div>
+                {% else %}
+                <div class="tag">Charte graphique</div>
+                {% endif %}
+                {% if real.tag == 'Logo' %}
+                <div class="tag activetag">Logo</div>
+                {% else %}
+                <div class="tag">Logo</div>
+                {% endif %}
+                {% if real.tag == 'Montage photo' %}
+                <div class="tag activetag">Montage photo</div>
+                {% else %}
+                <div class="tag">Montage photo</div>
+                {% endif %}
+                {% if real.tag == 'Retouche photo' %}
+                <div class="tag activetag">Retouche photo</div>
+                {% else %}
+                <div class="tag">Retouche photo</div>
+                {% endif %}
+                {% if real.tag == 'Site web' %}
+                <div class="tag activetag">Site web</div>
+                {% else %}
+                <div class="tag">Site web</div>
+                {% endif %}
+                {% if real.tag == 'Autre' %}
+                <div class="tag activetag">Autre</div>
+                {% else %}
+                <div class="tag">Autre</div>
+                {% endif %}
+            </div>
+
+            <div class="about row">
+                <h4 class="col-8">Description :</h4>
+                <p class="col-8">
+                    {{ real.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
