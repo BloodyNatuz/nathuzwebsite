@@ -1174,3 +1174,19 @@ user-select: none;
 .login button{
   margin-bottom: 4em;
 }
+
+/* ---------- */
+/* ---404---- */
+/* ---------- */
+
+.errorpage{
+  height: 80vh;
+  width: auto;
+  background-image: url(/img/404.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.errorpage h2{
+  opacity: 0;
+}
