@@ -39,6 +39,20 @@ class RealRepository extends ServiceEntityRepository
         }
     }
 
+    public function findOnlyThree(): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 
+            'SELECT * FROM `real` ORDER BY id DESC LIMIT 3;
+            ';
+        
+        $stmt = $conn->prepare($sql);
+        $resultSet = $stmt->executeQuery(['id']);
+
+        // returns an array of arrays (i.e. a raw data set)
+        return $resultSet->fetchAllAssociative();
+    }
 //    /**
 //     * @return Real[] Returns an array of Real objects
 //     */
