@@ -388,44 +388,17 @@ body .card:hover{
 /* --WORKS--- */
 /* ---------- */
 
-/* SEARCHBAR */
-
-.searchbar{
-    padding-top: 5em;
-    padding-bottom: 2em;
-    padding-left: 48em;
-    padding-right: 48em;
-}
-
-@media (max-width: 1650px){
-  .searchbar{
-      padding-left: 20em;
-      padding-right: 20em;
-  }
-}
-
-@media (max-width: 990px){
-    .searchbar{
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-}
-
-.searchbar .form-control{
-    background: none;
-}
-
-.searchbar .form-control:focus{
-    background: none;
-    border: 1px solid #F0212B;
-    box-shadow: 0 0px 20px #F0212B;
-}
-
-.searchbar .input-group-text{
-    background: none;
-}
-
 /* REALISATIONS CARDS */
+
+.works .page_title{
+  margin-top: 2em;
+}
+
+.works hr{
+  margin-left: 50em;
+  margin-right: 50em;
+  color: #F0212B;
+}
 
 .realisations .cards-wrapper {
     display: grid;

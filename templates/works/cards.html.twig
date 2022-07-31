@@ -1,0 +1,23 @@
+    <!-- REALISATIONS CARDS -->
+    <div class="works">
+        <h2 class="page_title">Mes réalisations</h2>
+        <hr>
+    </div>
+    <div class="realisations">
+        
+
+        <section class="cards-wrapper">
+            {% for reals in reals %}
+            <div class="card-grid-space">
+              <a class="card" href="#" style="--bg-img: url({{ reals.realImg }})">
+                <div>
+                  <h2>{{ reals.name }}</h2>
+                  <p>{{ reals.description[:100] ~ '...' }}</p>
+                  <div class="tags">
+                    <div class="tag">{{ reals.tag }}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+        </section>
