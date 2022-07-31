@@ -4,36 +4,17 @@
         <div class="container">
           <h2>Les services</h2>
           <div class="row services">
-  
+            {% for services in services %}
             <div class="card" style="width: 18rem;">
               <img src="/img/photo.jpg" class="card-img-top" alt="personne travaillant sur un ordinateur">
               <div class="card-body">
-                <h5 class="card-title">Photo</h5>
-                <h5 class="card-text">Montages et retouches photos.</h5>
-                <h5 class="card-title">80 à 100€</h5>
+                <h5 class="card-title">{{ services.name }}</h5>
+                <h5 class="card-text">{{ services.description }}</h5>
+                <h5 class="card-title">{{ services.price }}</h5>
                 <hr>
               </div>
             </div>
-  
-            <div class="card" style="width: 18rem;">
-              <img src="/img/design.jpg" class="card-img-top" alt="personne travaillant sur un ordinateur">
-              <div class="card-body">
-                <h5 class="card-title">Créations graphiques</h5>
-                <h5 class="card-text">Création visuelle, de logos, chartes graphiques, affiches.</h5>
-                <h5 class="card-title">100€ à 2 000€</h5>
-                <hr>
-              </div>
-            </div>
-  
-            <div class="card" style="width: 18rem;">
-              <img src="/img/dev.jpg" class="card-img-top" alt="personne développement sur un ordinateur">
-              <div class="card-body">
-                <h5 class="card-title">Création de site web</h5>
-                <h5 class="card-text">Création de site web sur WordPress et Symfony</h5>
-                <h5 class="card-title">7 500€ à 10 000€</h5>
-                <hr>
-              </div>
-            </div>
+            {% endfor %}
           </div>
           </div>
         </div>
