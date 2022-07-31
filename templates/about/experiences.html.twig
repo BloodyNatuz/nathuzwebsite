@@ -1,0 +1,16 @@
+        <!-- EXPERIENCES -->
+        <div class="experiences">
+            <h4>Mes expériences</h4>
+            <div class="exps row">
+            {% for exps in exps %}
+              <div class="exp col-lg-3 col-sm-6">
+                <h5>{{ exps.name }}</h5>
+                <hr>
+                <p>{{ exps.description }}</p>
+                <p>{{ exps.date }}</p>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+          <hr>
+        </div>
