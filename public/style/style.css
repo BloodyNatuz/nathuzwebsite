@@ -939,7 +939,7 @@ user-select: none;
 .contacthero{
   height: 40vh;
   width: 100%;
-  background-image: url(../img/contact.jpg);
+  background-image: url(/img/contact.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

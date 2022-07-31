@@ -1,0 +1,54 @@
+    <!-- INFOS -->
+    <div class="contactinfos">
+        <div class="container">
+            <h2>Mes informations</h2>
+            <hr>
+            <p class="contactdescription">
+                Si vous avez besoin d'une informations, d'un conseil ou si vous avez un projet en tête, n'hésitez pas
+                à me contacter sur ces différentes plateformes.
+            </p>
+
+            <div class="contactreso">
+                <h3>Réseaux sociaux</h3>
+                <div class="hrvertical"></div>
+                <div class="lireseaux">
+                    <a href="https://www.instagram.com/nathuz.noe/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://fr.linkedin.com/in/noé-pupin-b035961ba"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/BloodyNatuz"><i class="fab fa-github"></i></a>
+                    <a href="https://www.behance.net/nathuz"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+
+            {% for users in users  %}
+            <div class="contactcoord">
+                <h3>Coordonnées</h3>
+                <div class="hrvertical"></div>
+                <div class="licoord">
+                  <div class="coordadd">
+                    <div class="coordtitle">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <p class="coordname">Adresse</p>
+                    </div>
+                    <p>{{ users.adress }}</p>
+                  </div>
+
+                  <div class="coordtel">
+                    <div class="coordtitle">
+                      <i class="fa-solid fa-phone"></i>
+                      <p class="coordname">Téléphone</p>
+                    </div>
+                    <p>{{ users.tel }}</p>
+                  </div>
+
+                  <div class="coordmail">
+                    <div class="coordtitle">
+                      <i class="fa-solid fa-at"></i>
+                      <p class="coordname">Email</p>
+                    </div>
+                    <p>{{ users.email }}</p>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
